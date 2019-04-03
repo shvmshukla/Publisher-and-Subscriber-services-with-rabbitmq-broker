@@ -1,0 +1,10 @@
+# fetch basic image
+FROM maven:3.3.9-jdk-8
+
+# local application port
+EXPOSE 9999
+
+ADD /target/receiver-0.0.1-SNAPSHOT.jar receiver-0.0.1-SNAPSHOT.jar
+
+# execute it
+CMD ["java","-jar","receiver-0.0.1-SNAPSHOT.jar"]

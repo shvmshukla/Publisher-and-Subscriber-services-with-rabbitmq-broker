@@ -1,0 +1,10 @@
+# fetch basic image
+FROM maven:3.3.9-jdk-8
+
+# local application port
+EXPOSE 9999
+
+ADD /target/PublisherService-1.0.0-jar-with-dependencies.jar PublisherService-1.0.0-jar-with-dependencies.jar
+
+# execute it
+CMD ["java","-jar","PublisherService-1.0.0-jar-with-dependencies.jar"]
